@@ -46,7 +46,8 @@ export default {
   watch: {
     searchedPokemon(newVal) {
       if (newVal)
-        this.filteredSearch = this.pokemonList.filter(x =>
+        this.filteredSearch = this.pokemonList.filter(
+          x =>
             // exclude selected pokemon from search results
             x.name.includes(newVal) && x.name !== this.$route.params.pokemon
         );
@@ -60,12 +61,12 @@ export default {
       data: { results }
     } = await this.$http(url);
     this.pokemonList = results;
- },
+  },
   methods: {
     selectItem({ name }) {
       this.selectedPokemon = name;
       this.searchedPokemon = "";
-      this.$router.push({path: `/${name}`});
+      this.$router.push({ path: `/${name}` });
     },
     resetSelection() {
       this.selectedPokemon = "";

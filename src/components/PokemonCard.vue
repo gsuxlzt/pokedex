@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { capitalize } from '@/utils/functions/helpers';
+import { capitalize } from "@/utils/functions/helpers";
 import { TYPE_COLORS } from "@/utils/constants/constants";
 export default {
   name: "PokemonCard",
@@ -43,7 +43,7 @@ export default {
       this.hasPokemonData = true;
     },
     goToPokemonDetails() {
-    this.$router.push({path:this.pokemonData.name});
+      this.$router.push({ path: this.pokemonData.name });
     },
     getColorFromType() {
       const type = this.pokemonData.types[0].type.name;
@@ -54,7 +54,7 @@ export default {
       console.log(data);
     },
     capitalizeName(name) {
-      return capitalize(name);;
+      return capitalize(name);
     },
     getPokeNumber() {
       return `000${this.pokemonData.id}`.slice(-4);
