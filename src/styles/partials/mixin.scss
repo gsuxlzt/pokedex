@@ -1,0 +1,30 @@
+// ------------------------------
+// Screen breakpoints
+// ------------------------------
+@mixin respond-to($media) {
+  @if $media == xs {
+    /* Extra small devices (Iphone, One plus upto 768px) */
+    @media screen and (max-width: $screen-width-xs + px) {
+      @content;
+    }
+  }
+  // Primary breakpoints
+  @if $media == sm {
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width: $screen-width-sm + px) {
+      @content;
+    }
+  }
+  @else if $media == md {
+    /* Medium devices (desktops, 1024px and up) */
+    @media screen and (min-width: $screen-width-md + px) {
+      @content;
+    }
+  }
+  @else if $media == lg {
+    /* Large devices (large desktops, 1280px and up) */
+    @media screen and (min-width: $screen-width-lg + px) {
+      @content;
+    }
+  }
+}

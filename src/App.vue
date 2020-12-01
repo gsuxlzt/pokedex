@@ -1,28 +1,61 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+        <div class="header">
+            <div class="logo-container">
+                <img src="/img/pokemon-logo.png" />
+            </div>
+            <div class="search-container">
+                <search-bar />
+            </div>
+        </div>
+   <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import SearchBar from './components/SearchBar';
 export default {
-  name: "App",
-  components: {
-    HelloWorld
-  }
-};
+    components: {
+        SearchBar
+    }
+}
 </script>
 
 <style lang="scss">
+
+    * {
+        box-sizing: border-box;
+    }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    width: 100%;
+    margin: 10px auto;
+    @include respond-to(md) {
+        max-width: 1440px;
+    }
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        div {
+            padding: 4px;
+        }
+
+        .logo-container {
+            max-width: 350px;
+            text-align: center;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 }
+
 </style>

@@ -1,4 +1,5 @@
-# pokedex
+# Pokedex
+### simple pokemon aggregator using the PokeAPI. Made with vue through the help of vue-cli.
 
 ## Project setup
 ```
@@ -15,7 +16,7 @@ yarn serve
 yarn build
 ```
 
-### Run your unit tests
+### Run your unit tests (not implemented yet)
 ```
 yarn test:unit
 ```
@@ -24,6 +25,3 @@ yarn test:unit
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
