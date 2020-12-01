@@ -174,7 +174,6 @@ export default {
     getStrongTypes() {
       // strong types if double damage to, no damage from, and half damage from,
       const arr = [];
-      console.log(this.typing.double_damage_to);
       this.typing["double_damage_to"].forEach(x => {
         if (!arr.includes(x.name)) arr.push(x.name);
       });

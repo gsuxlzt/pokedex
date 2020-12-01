@@ -51,7 +51,6 @@ export default {
     },
     prepareData(data) {
       this.pokemonData = data;
-      console.log(data);
     },
     capitalizeName(name) {
       return capitalize(name);
