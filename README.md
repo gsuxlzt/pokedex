@@ -1,5 +1,5 @@
 # Pokedex
-### simple pokemon aggregator using the PokeAPI. Made with vue through the help of vue-cli.
+#### simple pokemon aggregator using the PokeAPI. Made with vue through the help of vue-cli.
 
 ## Project setup
 ```
